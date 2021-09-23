@@ -1,0 +1,22 @@
+# 最初にすべての階層のファイルを無視します
+# 階層は必要なだけ追加する
+### all ignore ###
+/*
+/.**
+
+# whitelist
+!/README.md
+!/.gitignore
+!Makefile
+
+!/.bashrc
+!/.bash_profile
+
+!/.vim/
+/.vim/*
+!/.vim/rc/
+!/.vim/rc/*
+
+!/.vimrc
+
+!/.tmux.conf
