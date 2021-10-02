@@ -3,9 +3,6 @@ export EDITOR='vim'
 
 #setxkbmap -option ctrl:nocaps
 
-#w3m for ranger
-export PATH="$PATH":"/usr/lib/w3m/"
-
 #alias
 alias ls='ls --color'
 alias ll='ls -alF'
@@ -16,3 +13,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export GOROOT=$PATH:/usr/local/go
+export GOPATH=/home/yuki/go  # GOPATHにすると決めた場所
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
