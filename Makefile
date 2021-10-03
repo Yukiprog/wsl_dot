@@ -1,9 +1,12 @@
 #variables
+PACMAN := sudo pacman -S
 bash: #Bash
+	$(PACMAN) $@
 	ln -vsf ${PWD}/.bashrc ${HOME}/.bashrc
 	ln -vsf ${PWD}/.bash_profile ${HOME}/.bash_profile
 
 vim: #vim https://blog.htkyama.org/vim_plugins_dein
+	$(PACMAN) $@
 	test -L ${HOME}/.vim || rm -rf ${HOME}/.vim
 	ln -vsfn ${PWD}/.vim ${HOME}/.vim
 	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
@@ -12,5 +15,10 @@ vim: #vim https://blog.htkyama.org/vim_plugins_dein
 	cd ~/.cache/dein && sh ./installer.sh ~/.cache/dein
 
 tmux: #tmux
+	$(PACMAN) $@	
 	ln -vsf ${PWD}/.tmux.conf ${HOME}/.tmux.conf
-dot: bash vim tmux
+
+bell:
+	ln -vsf ${PWD}/.inputrc ${HOME}/.inputrc
+	
+dot: bash vim tmux bell
