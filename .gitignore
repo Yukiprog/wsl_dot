@@ -22,3 +22,5 @@
 !/.tmux.conf
 
 !/.inputrc
+
+!/garbage_erase.py
